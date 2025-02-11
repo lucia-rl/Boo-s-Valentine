@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Primera Interacción</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .adventure-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: auto;
+      margin-top: 150px;
+    }
+    h1 {
+      text-align: center;
+      color: #f7ecdc;
+      text-shadow: 2px  0px 0px black,
+               0px  2px 0px black,
+              -2px  0px 0px black,
+               0px -2px 0px black;
+    }
+    .choices {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    button {
+      padding: 10px;
+      background-color: #95b5ff;
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #0306af;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="adventure-container">
+    <h1>Nuestra Primera Interacción 👀❤️</h1>
+    <p id="story">Acabas de aparcar y mientras sacas las cosas del coche ves llegando a una Morocha que fichas en cuanto entró a la oficina. ¿¿Qué haces??</p>
+    <div class="choices">
+      <button onclick="choose('pasotismo')">Actuar con normalidad e ir a la oficina</button>
+      <button onclick="choose('maraton')">Saludarle de lejos y correr para alcanzarla</button>
+    </div>
+  </div>
+
+  <script>
+    function choose(choice) {
+      const storyElement = document.getElementById('story');
+      if (choice === 'pasotismo') {
+        storyElement.innerText = "No seas mentiroso, eso no pasó así -.-";
+      } else if (choice === 'maraton') {
+        storyElement.innerText = "Al ancanzarla le invitas a un café buscando una excusa para volver a quedar en otro momento. Así comenzo tu pesadilla... (cuidadito con pensar así -.- jaja)";
+      } 
+    }
+  </script>
+</body>
+</html>
